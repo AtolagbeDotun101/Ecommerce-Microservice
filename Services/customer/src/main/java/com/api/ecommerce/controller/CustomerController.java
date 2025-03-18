@@ -14,10 +14,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("api/v1/customer")
-@RequiredArgsConstructor
 public class CustomerController {
     @Autowired
     private final CustomerService customerService;
+
+    public CustomerController (CustomerService customerService) {
+        this.customerService = customerService;
+    }
 
     @PostMapping
     public ResponseEntity<String> createCustomer(
@@ -38,8 +41,8 @@ public class CustomerController {
 
     }
 
-    @GetMapping('exist/{id}')
-    public  ResponseEntity<boolean> existById(@PathVariable String id){
+    @GetMapping("/exist/{id}")
+    public  ResponseEntity<Boolean> existById(@PathVariable String id){
         return ResponseEntity.ok(customerService.existById(id));
     }
 

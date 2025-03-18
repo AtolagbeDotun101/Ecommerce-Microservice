@@ -10,10 +10,10 @@ public record CustomerRequest(
       String id,
 
      @NotNull(message = "firstname cannot be null")
-      String firstName,
+      String firstname,
 
     @NotNull(message = "lastname cannot be null")
-     String lastName,
+     String lastname,
 
     @NotNull(message = "email cannot be null")
     @Email(message = "email must be valid")

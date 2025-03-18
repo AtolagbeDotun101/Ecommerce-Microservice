@@ -12,7 +12,7 @@
 	<artifactId>config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>config-server</name>
-	<description>spring with microservicw</description>
+	<description>spring with microservice</description>
 	<url/>
 	<licenses>
 		<license/>
